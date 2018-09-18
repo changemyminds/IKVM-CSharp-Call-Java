@@ -15,12 +15,11 @@ IKVM.NET開源碼是基于.NET CLR的Java虛擬機。<br>
 Windows 10 (64bit)
 
 ### 下載檔案及安裝
-C# IDE： [Visaul Studio 2013](https://docs.microsoft.com/zh-tw/visualstudio/productinfo/vs2013-sysrequirements-vs)<br>
-IKVM  ： [ikvmbin-8.1.5717.0](http://weblog.ikvm.net/2015/08/26/IKVMNET81ReleaseCandidate0.aspx)<br>
-
-Java IDE   ： [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=windows)<br>
-Java SDK 8 ： [jdk-8u181-windows-x64(64bit)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)<br>
-Java jre 8 ： [jre-8u181-windows-x64(64bit)](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)<br>
+- C# IDE： [Visaul Studio 2013](https://docs.microsoft.com/zh-tw/visualstudio/productinfo/vs2013-sysrequirements-vs)<br>
+- IKVM  ： [ikvmbin-8.1.5717.0](http://weblog.ikvm.net/2015/08/26/IKVMNET81ReleaseCandidate0.aspx)<br>
+- Java IDE   ： [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=windows)<br>
+- Java SDK 8 ： [jdk-8u181-windows-x64(64bit)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)<br>
+- Java jre 8 ： [jre-8u181-windows-x64(64bit)](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)<br>
 
 ## 設定環境變數：
 ### Java
