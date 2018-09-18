@@ -2,7 +2,7 @@
 
 ## 前言：
 IKVM.NET開源碼是基于.NET CLR的Java虛擬機。<br>
-基于.NET的Java虛擬機意味著我們可以讓Java程式跑在.NET上，可以通過虛擬機這個中介讓Java程式與.NET應用程式一起協同工作。
+基于.NET的Java虛擬機意味著我們可以讓Java程式跑在.NET上，通過虛擬機這個中介讓Java程式與.NET應用程式一起運作。
 
 這篇文章主要是講解C# Call Java的所有流程(包含Jar的產生)。
 
