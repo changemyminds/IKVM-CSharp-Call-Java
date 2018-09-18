@@ -1,7 +1,7 @@
 # IKVM C# Call Java Class.
 
 ## 前言：
-IKVM.NET開源碼是基于.NET CLR的Java虛擬機。
+IKVM.NET開源碼是基于.NET CLR的Java虛擬機。<br>
 基于.NET的Java虛擬機意味著我們可以讓Java程式跑在.NET上，可以通過虛擬機這個中介讓Java程式與.NET應用程式一起協同工作。
 
 這篇文章主要是講解C# Call Java的所有流程(包含Jar的產生)。
@@ -59,43 +59,43 @@ Java jre 8 ： [jre-8u181-windows-x64(64bit)](http://www.oracle.com/technetwork/
 使用Intelij建立一個Java專案，並將我們要用的Java Class建置成Jar檔案，步驟如下： <br>
 在Intelij下，創建ForCSharpSample專案 <br>
 在src內創建```JavaHelloWorld.class```並且建立一個方法```public String getHelloWorld``` <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java0.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java0.PNG)
 
 接著要來設定Jar的部分 <br>
 - File -> Project Structure -> Artifacts -> (點選+的符號) -> JAR -> From modules with dependencies... <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java1.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java1.PNG)
 
 Create JAR from Modules -> (圈選)copy to the output directory and link via manifest -> click OK <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java2.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java2.PNG)
 
 勾選 Show content of elements -> click OK <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java3.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java3.PNG)
 
 上方的狀態列 -> Build -> Build Artifacts... -> Build Artifact -> ForCSharpSample.jar -> Build <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java4.PNG)
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java5.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java4.PNG)
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java5.PNG)
 
 確認Jar是否產生成功。 <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/java6.PNG)	
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java6.PNG)	
 
 ### C#的部分
 使用IKVM將Java Jar檔案編譯成dll檔案，並在Visaul Studio使用C#去呼叫，步驟如下： <br>
 將ForCSharpSample.jar檔案複製到你想要的目錄底下，例如```D:\Sample\ForCSharpSample.jar``` <br>
 使用命令```ikvmc -out:JavaHelloWorld.dll ForCSharpSample.jar``` <br>
 上述命令會將```ForCSharpSample.jar```輸出成```JavaHelloWorld.dll```，並確認dll檔案是否有建立。 <br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/ikvm0.PNG) <br>
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/ikvm0.PNG) <br>
 
 在Visual Studio底下，創建IKVMSample專案 <br>
 並在專案目錄下，創建DLLs資料夾 <br>
 將需要用到的檔案，```JavaHelloWorld.dll```、```IKVM.OpenJDK.Core.dll```複製到DLLs資料夾底下，並加入到參考中。<br>
 補充：根據你所需要使用到的Java類別，來添加```IKVM.XXXX.dll``` (IKVM的dll檔案位於下載的```ikvm-8.1.5717.0\bin```底下)<br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/CSharp0.PNG) <br>
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/CSharp0.PNG) <br>
 
 確認加入參考是否正確。<br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/CSharp1.PNG) <br>
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/CSharp1.PNG) <br>
 
 撰寫C#程式碼，並執行。<br>
-![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/CSharp2.PNG) <br>
+![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/CSharp2.PNG) <br>
 
 ## 參考資料
 - [IKVM.NET介紹](https://www.itsfun.com.tw/IKVM.NET/wiki-0737404-5694583)
