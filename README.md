@@ -61,7 +61,7 @@ Windows 10 (64bit)
 ![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java0.PNG)
 
 接著要來設定Jar的部分 <br>
-- File -> Project Structure -> Artifacts -> (點選+的符號) -> JAR -> From modules with dependencies... <br>
+File -> Project Structure -> Artifacts -> (點選+的符號) -> JAR -> From modules with dependencies... <br>
 ![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/pictures/java1.PNG)
 
 Create JAR from Modules -> (圈選)copy to the output directory and link via manifest -> click OK <br>
