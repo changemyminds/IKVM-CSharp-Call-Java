@@ -86,7 +86,8 @@ Create JAR from Modules -> (圈選)copy to the output directory and link via man
 ![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/ikvm0.PNG) <br>
 
 在Visual Studio底下，創建IKVMSample專案 <br>
-並在專案目錄下，創建DLLs資料夾，將需要用到的檔案，```JavaHelloWorld.dll```、```IKVM.OpenJDK.Core.dll```複製到DLLs資料夾底下，並加入到參考中。<br>
+並在專案目錄下，創建DLLs資料夾 <br>
+將需要用到的檔案，```JavaHelloWorld.dll```、```IKVM.OpenJDK.Core.dll```複製到DLLs資料夾底下，並加入到參考中。<br>
 補充：根據你所需要使用到的Java類別，來添加```IKVM.XXXX.dll``` (IKVM的dll檔案位於下載的```ikvm-8.1.5717.0\bin```底下)<br>
 ![image](https://github.com/changemyminds/IKVM_CSharp_Call_Java/blob/master/picture/CSharp0.PNG) <br>
 
